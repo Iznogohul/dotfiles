@@ -1,0 +1,24 @@
+   URxvt.background: #000000
+   URxvt.foreground: #C8C8FF
+   URxvt.saveLines: 2000 
+   URxvt.scrollBar: False
+   URxvt.scrollstyle: rxvt
+   URxvt.termName: rxvt
+   URxvt.urgentOnBell: True
+   URxvt.cursorBlink: False
+   URxvt.print-pipe: "lsd"
+   URxvt.depth: 32
+   URxvt.font:	xft:Hack NF:style=Regular:pixelsize=14
+   		!Need to install Nerd Font Complete inorder to work or use your favorable font
+   
+   URxvt.letterSpace: -1
+
+   URxvt*inheritPixmap: true
+   URxvt*transparent: true
+   URxvt*shading: 30
+
+   URxvt*iso14755: False
+
+   URxvt.perl-ext-common: default,matcher
+   URxvt.url-launcher: /usr/bin/xdg-open
+   URxvt.matcher.button: 1
