@@ -1,4 +1,0 @@
-# Get sha of docker image
-docker buildx imagetools inspect node:lts-alpine --format "{{json .Manifest}}" | jq -r '.digest'
-# Genetate sbom
-docker buildx build --provenance=true --sbom=true --tag iznogohul/image:latest -f Dockerfile .
