@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare Release"
+  short_description: "Prepare a changelog and version bump on a review branch"
+  default_prompt: "Prepare the next release from develop: analyze changes since the previous release, update CHANGELOG.md, package.json, and VERSION, and leave the result on chore/update-changelog for review."
