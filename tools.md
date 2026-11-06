@@ -10,6 +10,40 @@ Genetate sbom
 
 - docker buildx build --provenance=true --sbom=true --tag iznogohul/image:latest -f Dockerfile .
 
+Keep a python image small (ongoing)
+
+- RUN find .venv -type d \( \
+    -name "tests" -o \
+    -name "test" -o \
+    -name "docs" -o \
+    -name "doc" -o \
+    -name "examples" -o \
+    -name "__pycache__" -o \
+    -name "include" \
+    \) -prune -exec rm -rf '{}' + && \
+    find .venv -type f \( \
+    -iname "*.md" -o \
+    -iname "*.rst" -o \
+    -iname "*.txt" -o \
+    -iname "*.c" -o \
+    -iname "*.h" -o \
+    -iname "*.hpp" -o \
+    -iname "*.a" -o \
+    -iname "*.map" -o \
+    -iname "LICENSE*" -o \
+    -iname "NOTICE*" \
+    \) -delete && \
+    find .venv -name "*.so*" -exec strip --strip-unneeded {} + 2>/dev/null || true && \
+    rm -rf /app/.venv/lib/python*/site-packages/pip* \
+    /app/.venv/lib/python*/site-packages/wheel* \
+    /app/.venv/lib/python*/site-packages/setuptools* \
+    /app/.venv/share
+
+Keep a nodejs image small (ongoing)
+
+- find node_modules -type d \( -name "test" -o -name "tests" -o -name "docs" -o -name "coverage" \) -prune -exec rm -rf '{}' + && \
+    find node_modules -type f \( -iname "*.md" -o -iname "*.txt" -o -iname "license*" -o -iname "*.map" \) -delete
+
 ## Various Links - Needs triage
 
 - <https://gatlenculp.medium.com/effortless-code-quality-the-ultimate-pre-commit-hooks-guide-for-2025-57ca501d9835>
