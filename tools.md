@@ -58,3 +58,4 @@ Keep a nodejs image small (ongoing)
 - <https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html#rule-9-integrate-container-scanning-tools-into-your-cicd-pipeline>
 - <https://www.linkedin.com/posts/iurii-rogulia_cloudflare-security-devops-share-7465301736136560641-EuTj/?utm_source=share&utm_medium=member_android&rcm=ACoAAC0u4hkBCOTNKLwqudHaa654eVW7zmRO5co>
 - <https://blastrock.github.io/fde-tpm-sb.html>
+- <https://www.cisa.gov/sites/default/files/2023-10/SecureByDesign_1025_508c.pdf>
